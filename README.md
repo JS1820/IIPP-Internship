@@ -145,7 +145,7 @@ These findings drive practical advancements in active defense, addressing modern
 
 ## Acknowledgments
 
-I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially @[haward79](https://github.com/haward79/) for their collaboration and insights that significantly enriched the overall experience.
+I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially @[haward79](https://github.com/haward79/) for his collaboration and insights that significantly enriched the overall experience.
 
 I express my gratitude to [IIPP](https://iipp.tw/) for the enriching opportunity to work under Prof. Hwang, visit Taiwan, and learn invaluable lessons in cybersecurity.
 
