@@ -8,9 +8,6 @@
 Welcome to the detailed documentation of the 3-month internship at NYCU AI College in Taiwan, where the main focus was on Active Defense implementation in Tpot CE Honeypot. 
 This research work was conducted in ANT Lab starting from September 1 2023, under the guidance of **Professor. Ren-Hung Hwang**, Dean of AI College, NYCU.
 
-### Background
-
-NYCU AI College's commitment to cutting-edge research provided a stimulating environment. This internship delved into advanced cybersecurity strategies, with a specific focus on SSH honeypot actions and the 'Affect' goal from MITRE Engage.
 
 ## Goals
 
@@ -150,4 +147,5 @@ These findings drive practical advancements in active defense, addressing modern
 ## Acknowledgments
 
 I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially [@haward79](https://github.com/haward79/) for their collaboration and insights that significantly enriched the overall experience.
-
+I express my gratitude to [IIPP](https://iipp.tw/) for the enriching opportunity to work under Prof. Hwang, visit Taiwan, and learn invaluable lessons in cybersecurity.
+I extend my thanks to Presidency University, Bangalore, for granting me the opportunity to pursue this internship and fostering an environment conducive to learning.
