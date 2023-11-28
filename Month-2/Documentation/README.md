@@ -39,7 +39,7 @@ Honeypots are decoy servers designed to attract attackers and monitor their acti
 
 ## HonSSH
 
-HonSSH is designed for use with a high interaction honeypot, sitting between an attacker and a honeypot, creating two separate SSH connections.
+[HonSSH](https://github.com/tnich/honssh) is designed for use with a high interaction honeypot, sitting between an attacker and a honeypot, creating two separate SSH connections.
 
 ### Features
 
@@ -97,12 +97,12 @@ HonSSH is designed for use with a high interaction honeypot, sitting between an 
 &nbsp;
 
 
-
+I had to stop using HonSSH because of a few issues with the network setup, i had in my mind, So i had to find an alternative Honeypot.!
 # Honeypot Implementation - Phase 2
 
 ## Tpot CE - Overview
 
-Tpot CE (Community Edition) is an all-in-one honeypot platform developed by Telekom-Security. It supports multiple honeypots and visualization options using the Elastic Stack. This phase focuses on Tpot CE and associated honeypots.
+[Tpot CE (Community Edition)](https://github.com/telekom-security/tpotce) is an all-in-one honeypot platform developed by Telekom-Security. It supports multiple honeypots and visualization options using the Elastic Stack. This phase focuses on Tpot CE and associated honeypots.
 
 ### Tpot CE - Honeypots Included
 
@@ -157,17 +157,20 @@ Tpot CE (Community Edition) is an all-in-one honeypot platform developed by Tele
    - Network Security Monitoring engine.
 
 ### Technical Architecture Of Tpot
+![image](https://github.com/0hex7/IIPP-Internship/assets/108691415/6af33860-552a-4368-a07a-17ffc3f700dc)
 
-#### System Requirements
+#### System Setup
 
-- A Virtual Machine / Hardware / Hive setup
-- 16 Gb RAM
-- 250 Gb SSD
-- Debian based System
+- VMWare VM running on Windows with,
+- 12 Gb RAM
+- 150 Gb SSD
+- Bridged Network with a Static IP: 140.113.110.151
+
+I also used another VM instance to run it in local network with NAT configuration with IP: 192.168.98.135
 
 #### Installation Steps
 
-1. Download ISO Image from [Debian Netboot](http://ftp.debian.org/debian/dists/bullseye/main/installer-amd64/current/images/netboot/mini.iso)
+1. Download ISO Image from [Debian Netboot](http://ftp.debian.org/debian/dists/bullseye/main/installer-amd64/current/images/netboot/mini.iso) or,
 2. Git Clone the Repository:
    ```bash
    git clone https://github.com/telekom-security/tpotce
@@ -177,7 +180,7 @@ Tpot CE (Community Edition) is an all-in-one honeypot platform developed by Tele
 Once installed on the VM machine, follow these steps:
 
 1. **Login:**
-   - Use `tsec` as the username and the setup password.
+   - Use `tsec` as the username and the setup password (During the Installation, we are supposed to input a password for the Default user: Tsec).
 
 2. **Successful Login:**
    - Access the Web-Based Login Interface using the same credentials.
@@ -187,23 +190,4 @@ Once installed on the VM machine, follow these steps:
    - Access the Logs.
    - Access Overall Health: `<IP>:64294`
 
-## Goals for Next Week
 
-- Start setting up the Honeypot.
-- Configure ELK Stack to run in sync with Tpot.
-- Use Kali to demonstrate some attacks.
-- Set up Lures.
-- Implement the "Affect" Goal of Engage Matrix.
-- Do a final implementation of proposed actions for the SSH honeypot.
-
-## Additional Information
-
-### Honeypot Setup
-
-- **Public IP Setup:**
-  - Used a public IP by giving a Bridged connection from my Windows PC running VMware VM instance of the Tpot.
-  - The IP address was `140.113.110.151`.
-
-- **Local Network Setup:**
-  - Used another Tpot VM with NAT config.
-  - Used only for the local network with IP `192.168.98.135`.
