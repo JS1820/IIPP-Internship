@@ -123,11 +123,6 @@ And many more tools, which were used during this Internship are recorded in Tool
 These findings drive practical advancements in active defense, addressing modern cybersecurity challenges efficiently.
 
 
-## IIPP Report Integration
-
-### Weekly Reports
-
-- **Week 1-12: https://drive.google.com/drive/folders/1w5y_S3zWM21egJUsc8SujbC3Nl3nzfzu?usp=sharing**
 
 
 ## GitHub Repository Structure
@@ -142,6 +137,25 @@ These findings drive practical advancements in active defense, addressing modern
 - **/Reference-materials/** : All other reference material is published in this
   
 - **/Tools/** : Additional resources on the tools used during the internship.
+
+
+
+## Internship goals Integration
+
+### 'Affect' goal Weekly Reports
+
+- **Week 1-12: https://drive.google.com/drive/folders/1w5y_S3zWM21egJUsc8SujbC3Nl3nzfzu?usp=sharing**
+
+### 'Expose' goal documentation
+
+- **Refer here for Expose goal of MITRE Engage implementation --  [Expose-goal](https://github.com/sandxxax/IIPP-Internship) Credits @[Pavan Kumar](https://github.com/Lonelypheonix/)**
+
+### 'Elicit' goal documentation
+
+- **Refer here for Elicit goal of MITRE Engage implementation --  [Elicit-goal](https://github.com/Lonelypheonix/IIPP-Internship) Credits @[Sandhya V](https://github.com/sandxxax/)**
+
+
+
 
 ## Acknowledgments
 
