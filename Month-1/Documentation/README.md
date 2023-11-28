@@ -42,6 +42,8 @@ The MITRE Engage matrix illustrates the relationship between techniques and tact
    - Eliciting information about the adversary to learn about their Tactics, Techniques, and Procedures (TTPs).
 
 ## Engagement Operations (I will be choosing 'Affect' goal for the upcoming work)
+Refer here for Expose goal of MITRE Engage implementation --  [Expose-goal](https://github.com/sandxxax/IIPP-Internship)
+Refer here for Elicit goal of MITRE Engage implementation --  [Elicit-goal](https://github.com/Lonelypheonix/IIPP-Internship)
 
 ### AFFECT Goal Overview
 
