@@ -47,7 +47,7 @@ In this phase, we focus on implementing lures within the Cowrie honeypot to attr
    - `docker stop cowrie`
    - `docker rm cowrie`
    - `sudo nano /opt/tpot/docker/cowrie/docker-compose.yml`
-   - In the compose file, change a few lines as given in the below picture -- refer [cowrie-docker-compose.yml](https://github.com/0hex7/IIPP-Internship/new/main/Month-3/Lures/Cowrie-docker-compose.yml)
+   - In the compose file, change a few lines as given in the below picture -- refer [cowrie-docker-compose.yml](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Lures/Cowrie-docker-compose.yml)
    ![Screenshot 2023-10-29 000725](https://github.com/0hex7/IIPP-Internship/assets/108691415/36f2c4ca-7bf7-436a-b368-cbf5b36ceb0c)
    - `docker-compose build cowrie`
    - `docker-compose up -d cowrie`
