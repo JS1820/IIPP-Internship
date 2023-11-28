@@ -6,7 +6,7 @@
 ### Introduction
 
 Welcome to the detailed documentation of the 3-month internship at NYCU AI College in Taiwan, where the main focus was on Active Defense implementation in Tpot CE Honeypot. 
-This research work was conducted in ANT Lab starting from September 1 2023, under the guidance of **Professor. Ren-Hung Hwang**, Dean of AI College, NYCU.
+This research work was conducted in ANT Lab starting from September-1 2023, under the guidance of **Professor. Ren-Hung Hwang**, Dean of AI College, NYCU.
 
 
 ## Goals
@@ -27,16 +27,16 @@ This research work was conducted in ANT Lab starting from September 1 2023, unde
    - Set up a postfix email server for the Email Manipulation activity and integrate Suricata rules.
    - Achieve Attack Vector Migration by isolating and analyzing potential malicious email attachments.
 
-## Monthly Work Breakdown (Structured as Directories)
+## Monthly Work Breakdown (Structured as Directories for this Repository)
 
-### Month 1: MITRE Engage Study and Honeypot Exposure (Refer [/Month-1/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-1) )
+### Month 1: MITRE Engage Study and Honeypot Exposure --  Refer [/Month-1/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-1) 
 
 - **MITRE Engage Study**
   - Detailed analysis of specific actions under the 'Affect' goal.
   - Documentation of 'Affect' goal actions for future implementation.
 
 
-### Month 2: Study SSH Honeypots and Choose One for the Implementation (Refer [/Month-2/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-2) )
+### Month 2: Study and Choose any one SSH Honeypot  --  Refer [/Month-2/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-2) 
 
 - **SSH Honeypot Study**
   - In-depth study of various SSH honeypots, considering features, community support, and suitability.
@@ -45,7 +45,7 @@ This research work was conducted in ANT Lab starting from September 1 2023, unde
 - **Selecting Actions for 'Affect' goal of MITRE Engage**
   - Selection of actions based on the chosen SSH honeypot's capabilities.
 
-### Month 3: Implement 4 Activities from 'Affect' goal (Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) )
+### Month 3: Implement 4 Activities from 'Affect' goal --  Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) 
 
 - **Lures Activity**
   - Configuration of the chosen honeypot to simulate an attacker's traversal through deceptive pathways.
@@ -78,10 +78,12 @@ This research work was conducted in ANT Lab starting from September 1 2023, unde
 5. **Porcmail**   
    - Used along with Postfix mail server, to implement Email Manipulation & Attack Vector Migration.
      
-And many more tools, which were used during this Internship are recorded in (Refer [/Tools/ ](https://github.com/0hex7/IIPP-Internship/tree/main/Tools) )
+And many more tools, which were used during this Internship are recorded in Tools directory --   Refer [/Tools/ ](https://github.com/0hex7/IIPP-Internship/tree/main/Tools) 
+
+
 ## Implementation Details
 
-### Overall Implementation of the Actions under 'Affcet' goal ((Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) ))
+### Overall Implementation of the Actions under 'Affcet' goal --   Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) 
 
 - **Lures Activity Implementation**
   - Postfix email server setup and configuration.
@@ -139,7 +141,7 @@ These findings drive practical advancements in active defense, addressing modern
   
 - **/Research-papers/** : Detailed summaries and insights from relevant research papers.
 - **/Reference-materials/** : All other reference material is published in this
-- 
+  
 - **/Tools/** : Additional resources on the tools used during the internship.
 
 ## Acknowledgments
