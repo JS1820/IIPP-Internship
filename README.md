@@ -5,8 +5,7 @@
 
 ### Introduction
 
-Welcome to the detailed documentation of the 3-month internship at NYCU AI College in Taiwan, where the main focus was on Active Defense implementation in Tpot CE Honeypot. 
-This research work was conducted in ANT Lab starting from September-1 2023, under the guidance of **Professor. Ren-Hung Hwang**, Dean of AI College, NYCU.
+Welcome to the detailed documentation of the 3-month internship at NYCU AI College in Taiwan, where the main focus was on Active Defense implementation in Tpot CE Honeypot. This research work was conducted in ANT Lab starting from September-1, 2023, under the guidance of **Professor. Ren-Hung Hwang**, Dean of AI College, NYCU. I am grateful to IIPP for providing me with this enriching opportunity.
 
 
 ## Goals
