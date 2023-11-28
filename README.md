@@ -29,14 +29,14 @@ This research work was conducted in ANT Lab starting from September 1 2023, unde
 
 ## Monthly Work Breakdown (Structured as Directories)
 
-### Month 1: MITRE Engage Study and Honeypot Exposure
+### Month 1: MITRE Engage Study and Honeypot Exposure (Refer [/Month-1/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-1) )
 
 - **MITRE Engage Study**
   - Detailed analysis of specific actions under the 'Affect' goal.
   - Documentation of 'Affect' goal actions for future implementation.
 
 
-### Month 2: Study SSH Honeypots and Choose One for the Implementation
+### Month 2: Study SSH Honeypots and Choose One for the Implementation (Refer [/Month-2/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-2) )
 
 - **SSH Honeypot Study**
   - In-depth study of various SSH honeypots, considering features, community support, and suitability.
@@ -45,7 +45,7 @@ This research work was conducted in ANT Lab starting from September 1 2023, unde
 - **Selecting Actions for 'Affect' goal of MITRE Engage**
   - Selection of actions based on the chosen SSH honeypot's capabilities.
 
-### Month 3: Implement 4 Activities from 'Affect' goal
+### Month 3: Implement 4 Activities from 'Affect' goal (Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) )
 
 - **Lures Activity**
   - Configuration of the chosen honeypot to simulate an attacker's traversal through deceptive pathways.
@@ -78,10 +78,10 @@ This research work was conducted in ANT Lab starting from September 1 2023, unde
 5. **Porcmail**   
    - Used along with Postfix mail server, to implement Email Manipulation & Attack Vector Migration.
      
-
+And many more tools, which were used during this Internship are recorded in (Refer [/Tools/ ](https://github.com/0hex7/IIPP-Internship/tree/main/Tools) )
 ## Implementation Details
 
-### Month 3: Overall Implementation of the Actions under 'Affcet' goal
+### Overall Implementation of the Actions under 'Affcet' goal ((Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) ))
 
 - **Lures Activity Implementation**
   - Postfix email server setup and configuration.
@@ -131,7 +131,7 @@ These findings drive practical advancements in active defense, addressing modern
 
 ## GitHub Repository Structure
 
-### Documentaion and Code
+### Documentaion and Code and Resources
 
 - **/Month-1/** : Documents related to the MITRE Engage study.
 - **/Month-2/** : Documents related to Honeypots and related code.
@@ -139,13 +139,13 @@ These findings drive practical advancements in active defense, addressing modern
   
 - **/Research-papers/** : Detailed summaries and insights from relevant research papers.
 - **/Reference-materials/** : All other reference material is published in this
-
-### Resources
-
+- 
 - **/Tools/** : Additional resources on the tools used during the internship.
 
 ## Acknowledgments
 
 I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially [@haward79](https://github.com/haward79/) for their collaboration and insights that significantly enriched the overall experience.
+
 I express my gratitude to [IIPP](https://iipp.tw/) for the enriching opportunity to work under Prof. Hwang, visit Taiwan, and learn invaluable lessons in cybersecurity.
+
 I extend my thanks to Presidency University, Bangalore, for granting me the opportunity to pursue this internship and fostering an environment conducive to learning.
