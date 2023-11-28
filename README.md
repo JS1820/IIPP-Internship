@@ -23,35 +23,32 @@ NYCU AI College's commitment to cutting-edge research provided a stimulating env
    - Choose one honeypot for implementation in the Tpot CE Honeypot.
    - Further refinement of selected actions for implementation.
 
-3. **Month 3: Implement 4 Activities**
+3. **Month 3: Choose and Implement any 4 Activities**
    - Implement the chosen SSH honeypot within the Tpot CE Honeypot.
    - Develop and execute the Lures activity by configuring the honeypot to create deceptive pathways.
    - Implement the proactive defense mechanism for the Baseline activity using Python code.
    - Set up a postfix email server for the Email Manipulation activity and integrate Suricata rules.
    - Achieve Attack Vector Migration by isolating and analyzing potential malicious email attachments.
 
-## Monthly Work Breakdown
+## Monthly Work Breakdown (Structured as Directories)
 
 ### Month 1: MITRE Engage Study and Honeypot Exposure
 
 - **MITRE Engage Study**
   - Detailed analysis of specific actions under the 'Affect' goal.
-  - Documentation of selected 'Affect' goal actions for future implementation.
+  - Documentation of 'Affect' goal actions for future implementation.
 
 
-### Month 2: Study SSH Honeypots and Choose Implementation
+### Month 2: Study SSH Honeypots and Choose One for the Implementation
 
 - **SSH Honeypot Study**
-  - In-depth study of various SSH honeypots, considering features, community support, and suitability for integration with Tpot CE Honeypot.
+  - In-depth study of various SSH honeypots, considering features, community support, and suitability.
   - Selection of one SSH honeypot for further implementation.
 
-- **Action Refinement**
-  - Further refinement of selected actions based on the chosen SSH honeypot's capabilities.
+- **Selecting Actions for 'Affect' goal of MITRE Engage**
+  - Selection of actions based on the chosen SSH honeypot's capabilities.
 
-### Month 3: Implement 4 Activities from Affect goal
-
-- **Honeypot Implementation**
-  - Integration of the chosen SSH honeypot within the Tpot CE Honeypot environment.
+### Month 3: Implement 4 Activities from 'Affect' goal
 
 - **Lures Activity**
   - Configuration of the chosen honeypot to simulate an attacker's traversal through deceptive pathways.
@@ -67,11 +64,9 @@ NYCU AI College's commitment to cutting-edge research provided a stimulating env
 
 ## Tools Used
 
-### Cybersecurity Tools
-
-1. **Suricata IDS**
-   - Deployment for real-time intrusion detection.
-   - Enhancement of the ability to capture and analyze malicious activities.
+1. **Tpot CE Honeypot**
+   - Choosen honeypot for the overall implementation.
+   - Configured to be utilised efficiently for our research work.
 
 2. **Kibana**
    - Utilized for log analysis, intrusion detection, and vulnerability detection.
@@ -79,17 +74,17 @@ NYCU AI College's commitment to cutting-edge research provided a stimulating env
 3. **Postfix Email Server**
    - Set up to facilitate the Email Manipulation activity and enable the analysis of malicious content in emails.
 
-### Honeypot Tools
+4. **Suricata IDS**
+   - Deployment for real-time intrusion detection.
+   - Enhancement of the ability to capture and analyze malicious activities.
 
-1. **Tpot CE Honeypot**
-   - Core honeypot used for exposing and analyzing potential threats.
-
-2. **SSH Honeypot inside Tpot CE honeypot Environment**
-   - Integrated within Tpot for comprehensive SSH honeypot capabilities.
+5. **Porcmail**   
+   - Used along with Postfix mail server, to implement Email Manipulation & Attack Vector Migration.
+     
 
 ## Implementation Details
 
-### Month 3: Email Manipulation and Attack Vector Migration
+### Month 3: Overall Implementation of the Actions under 'Affcet' goal
 
 - **Lures Activity Implementation**
   - Postfix email server setup and configuration.
@@ -111,64 +106,48 @@ NYCU AI College's commitment to cutting-edge research provided a stimulating env
 
 ## Research Findings
 
-### Advanced Cybersecurity Strategies
+### Cutting-edge Active Defense:
 
-#### 'DECEPTIVE DECOYS: Combining Believable User and Network Activities'
+#### 1. **Dynamic Honeypot Integration:**
+   - Adapted honeypot configurations dynamically for robust threat detection.
 
-- Emphasis on combining believable user and network activities for creating effective deceptive decoys.
-- Direct impact on the implementation of the Lures activity, ensuring realistic traps for potential attackers.
+#### 2. **Behavioral Analysis for Anomaly Detection:**
+   - Integrated custom rules into Suricata IDS for identifying novel threats.
 
-#### 'Hackers Came, But the French Were Prepared'
+### Practical Insights:
 
-- Insights into proactive defense mechanisms demonstrated in countering potential threats.
-- Direct influence on the development of the proactive defense mechanism in the Baseline activity.
+#### 1. **Real-world Active Defense:**
+   - Implemented active defense measures, enhancing threat visibility in live environments.
+
+#### 2. **Collaborative Threat Intelligence:**
+   - Emphasized the value of collaborative threat intel sharing for collective defense.
+
+These findings drive practical advancements in active defense, addressing modern cybersecurity challenges efficiently.
+
 
 ## IIPP Report Integration
 
-### Gains and Experiences
+### Weekly Reports
 
-- **Month 1**
-  - Introduction to advanced cybersecurity concepts and MITRE Engage goals.
+- **Week 1-12: https://drive.google.com/drive/folders/1w5y_S3zWM21egJUsc8SujbC3Nl3nzfzu?usp=sharing**
 
-- **Month 2**
-  - Deepened understanding of SSH honeypots and selection for implementation.
-
-- **Month 3**
-  - Practical implementation of chosen honeypot and execution of multiple cybersecurity activities.
-
-### Life in Taiwan
-
-- **Cultural Experience**
-  - Immersive experience in Taiwan's vibrant culture.
-
-- **Collaborative Atmosphere**
-  - Dynamic learning environment at NYCU AI College.
 
 ## GitHub Repository Structure
 
-### Code
+### Documentaion and Code
 
-- **/month1_mitre_engage_study**: Documents related to the MITRE Engage study and action selection.
-- **/month1_honeypot_exposure**: Configuration details for Tpot CE Honeypot exposure.
-
-- **/month2_ssh_honeypot_study**: Documentation on the study of SSH honeypots and the chosen implementation.
-
-- **/month3_honeypot_implementation**: Code and configurations for integrating the chosen SSH honeypot within Tpot CE Honeypot.
-- **/month3_lures_activity**: Cowrie honeypot configuration and file system alteration.
-- **/month3_baseline_activity**: Python scripts and documentation for the proactive defense mechanism.
-- **/month3_email_manipulation**: Postfix email server setup and configuration.
-- **/month3_attack_vector_migration**: Documentation and analysis of isolated email attachments.
-
-### Documentation
-
-- **/research_papers**: Detailed summaries and insights from relevant research papers.
-- **/iipp_report**: Integrated content from the IIPP report.
+- **/Month-1/** : Documents related to the MITRE Engage study.
+- **/Month-2/** : Documents related to Honeypots and related code.
+- **/Month-3/** : Code and configurations for implementing all 4 of the 'Affect' goal actions in the Honeypot.
+  
+- **/Research-papers/** : Detailed summaries and insights from relevant research papers.
+- **/Reference-materials/** : All other reference material is published in this
 
 ### Resources
 
-- **/tools_used**: Additional resources on the tools used during the internship.
+- **/Tools/** : Additional resources on the tools used during the internship.
 
 ## Acknowledgments
 
-I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to colleagues at the ANT Lab for their collaboration and insights that significantly enriched the overall experience.
+I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially [@haward79](https://github.com/haward79/) for their collaboration and insights that significantly enriched the overall experience.
 
