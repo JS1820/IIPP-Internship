@@ -82,7 +82,7 @@ And many more tools, which were used during this Internship are recorded in Tool
 
 ## Implementation Details
 
-### Overall Implementation of the Actions under 'Affcet' goal --   Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) 
+### Overall Implementation of the Actions under 'Affect' goal --   Refer [/Month-3/](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3) 
 
 - **Lures Activity Implementation**
   - Postfix email server setup and configuration.
@@ -145,7 +145,7 @@ These findings drive practical advancements in active defense, addressing modern
 
 ## Acknowledgments
 
-I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially [@haward79](https://github.com/haward79/) for their collaboration and insights that significantly enriched the overall experience.
+I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially @[haward79](https://github.com/haward79/) for their collaboration and insights that significantly enriched the overall experience.
 
 I express my gratitude to [IIPP](https://iipp.tw/) for the enriching opportunity to work under Prof. Hwang, visit Taiwan, and learn invaluable lessons in cybersecurity.
 
