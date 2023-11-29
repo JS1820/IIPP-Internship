@@ -118,4 +118,10 @@ In this phase, we focus on implementing lures within the Cowrie honeypot to attr
 
 ### Conclusion
 
+![Screenshot 2023-11-29 133353](https://github.com/0hex7/IIPP-Internship/assets/108691415/529e3eeb-afd6-4f27-b070-610f05b49ead)
+
+The differences with and without 'lures' in cowrie honeypot, is shown here. 
+
+![Screenshot 2023-11-29 133457](https://github.com/0hex7/IIPP-Internship/assets/108691415/c4d37bae-1e6a-4312-ba0e-e646d9f983ad)
+
 The successful implementation of lures within the Cowrie honeypot enhances the environment's authenticity, attracting potential attackers and providing valuable insights for further analysis. The integration of realistic scenarios strengthens the honeypot's ability to capture diverse attack patterns.
