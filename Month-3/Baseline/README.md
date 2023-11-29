@@ -1,4 +1,4 @@
-# Enhanced Baseline Implementation in Tpot Honeypot
+# Baseline Implementation in Tpot Honeypot
 
 ## Introduction
 
