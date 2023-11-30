@@ -1,0 +1,4 @@
+#/^From:.*@[^nycuaiserver.ddns.net]/ /^To:susmails@nycuaiserver.ddns.net/ REJECT
+/^From:.*@[^nycuaiserver.ddns.net]/ REJECT
+/^To:susmails@nycuaiserver.ddns.net/ REJECT
+/^To:reviewunit@nycuaiserver.ddns.net/ REJECT
