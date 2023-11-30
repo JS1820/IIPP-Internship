@@ -4,52 +4,35 @@
 
 Attack vector migration involves the strategic redirection of potential threats, such as malicious attachments (.zip files in this case), away from the main production server to an isolated environment. This documentation outlines the process of attack vector migration through the implementation of mail manipulation techniques in the Tpot Honeypot.
 
+Attack vector migration is implemented along with [Email manipulation](https://github.com/0hex7/IIPP-Internship/tree/main/Month-3/Email-manipulation).
+
 ## Background
 
 The need for attack vector migration arises from the inherent risks associated with receiving emails containing potentially harmful attachments. In this scenario, the focus is on mitigating threats associated with .zip files. By leveraging mail manipulation techniques, we redirect emails with .zip attachments from the main production server to an isolated environment, thereby minimizing the risk of compromising critical systems.
 
 ## Mail Manipulation for Attack Vector Migration
 
-### Phase 1: Proposed Model
+### Implementation Steps
 
-#### Model Overview
+#### Mail Server and Procmail Setup
 
-The proposed model in Phase 1 involves deploying a mail server within the honeypot and utilizing Suricata for monitoring email contents. Custom rules are developed to detect malicious .zip attachments, and suspicious emails are forwarded to another server for in-depth analysis.
-
-![Screenshot 1](https://github.com/0hex7/IIPP-Internship/assets/108691415/faa8b926-8c03-4daf-bef8-14dd434e87d4)
-
-#### Implementation Steps
-
-1. **Mail Server Setup (Postfix):**
+1. **Mail Server (Postfix) Installation:**
    - Install and configure the Postfix mail server.
    - Configure Postfix to work with Gmail relay.
 
-2. **Suricata Integration:**
-   - Develop custom Suricata rules to detect suspicious email activities, especially those related to .zip attachments.
-   - Modify the Suricata container inside the Tpot honeypot to accommodate the custom rules.
+2. **Domain Registration:**
+   - Register a domain (e.g., nycuaiserver.ddns.net) on [www.noip.com](https://www.noip.com).
+   
+3. **Setting up DUC:**
+   - Download and install DUC, associating the dynamic IP with the registered domain.
 
-3. **Issues and Alternatives:**
-   - Acknowledge Suricata limitations and consider alternatives for functionalities like forwarding emails with .zip attachments.
+4. **MX Records Setup:**
+   - Login to the domain registrar (no-ip) and add 1 MX record with the highest priority for the honeypot's hostname.
 
-### Phase 2: Alternative Approach
+5. **Mail Server Test:**
+   - Verify the mail server's functionality by sending a test email from a personal account to the mail server.
 
-#### Introduction of Procmail
-
-To address Suricata limitations, Procmail is introduced. Procmail is a versatile program for filtering, sorting, and storing emails. It plays a crucial role in the attack vector migration process.
-
-#### Network Architecture
-
-The network architecture includes hidden accounts/servers isolated from external threats.
-
-![Screenshot 2023-11-30 115129](https://github.com/0hex7/IIPP-Internship/assets/108691415/23350eac-544f-4f71-9ff4-cbb114a03de9)
-
-#### Isolated Accounts/ Servers
-
-To isolate accounts:
-
-- Add new users to the system.
-- Modify /etc/aliases to include these users.
-- Set up header checks in the Postfix configuration to reject emails not from the specified domain.
+ **The mail server is set up, and incoming mails are being delivered.**
 
 #### Procmail Setup
 
@@ -59,6 +42,13 @@ To isolate accounts:
 2. **Mail Forwarding Setup:**
    - Create rules in `~/.procmailrc` to forward emails with .zip attachments to a designated environment.
    - Modify the configuration file of the mail server (Postfix) to catch commands from Procmail.
+
+## Isolated Environment Setup
+
+1. **Isolated Accounts/ Servers:**
+   - Add new users to the system.
+   - Modify /etc/aliases to include these users.
+   - Set up header checks in the Postfix configuration to reject emails not from the specified domain.
 
 ## Emulation and Testing
 
@@ -91,4 +81,4 @@ The attack vector migration process is tested using various scenarios:
 
 ## Conclusion
 
-The integration of Postfix, Suricata, and Procmail facilitates attack vector migration by effectively redirecting emails with malicious .zip attachments to an isolated environment. This comprehensive approach significantly strengthens the security posture against .zip file-based threats, ensuring that the main production server remains protected from potential harm. The synergy between attack vector migration and mail manipulation creates a robust defense mechanism against a variety of adversarial tactics.
+The integration of Postfix and Procmail facilitates attack vector migration by effectively redirecting emails with malicious .zip attachments to an isolated environment. This comprehensive approach significantly strengthens the security posture against .zip file-based threats, ensuring that the main production server remains protected from potential harm. The synergy between attack vector migration and mail manipulation creates a robust defense mechanism against a variety of adversarial tactics.
