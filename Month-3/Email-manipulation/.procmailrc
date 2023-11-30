@@ -1,0 +1,47 @@
+# ~/.procmailrc
+
+SHELL=/bin/bash
+LOGFILE=$HOME/procmail.log
+VERBOSE=on
+
+# Forward emails with .exe or .zip attachments to reviewunit
+:0
+* ^Content-Type:.*multipart/mixed
+* .exe|zip
+! reviewunit@nycuaiserver.ddns.net
+
+# Forward emails with suspicious content to susmails
+:0
+* B ?? ^Subject:.*http://
+! susmails@nycuaiserver.ddns.net
+
+:0
+#* B ?? ^Content-Type:.*text/html
+* B ?? <http://
+! susmails@nycuaiserver.ddns.net
+
+:0
+#* B ?? ^Content-Type:.*text/html
+* B ?? [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+
+! susmails@nycuaiserver.ddns.net
+
+# Additional examples of suspicious emails
+:0
+* B ?? ^Subject:.*(urgent|important|verify|password|account|security)
+! susmails@nycuaiserver.ddns.net
+
+:0
+* B ?? ^From:.*yahoo\.com
+! susmails@nycuaiserver.ddns.net
+
+:0
+* B ?? ^Reply-To:.*someunreputeddomain\.com
+! susmails@nycuaiserver.ddns.net
+
+:0
+* B ?? ^To:.*undisclosed-recipients
+! susmails@nycuaiserver.ddns.net
+
+:0
+* B ?? ^X-Spam-Flag:.*YES
+! susmails@nycuaiserver.ddns.net
