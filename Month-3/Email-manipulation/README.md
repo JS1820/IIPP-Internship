@@ -24,7 +24,7 @@ We are using [Postfix](https://github.com/vdukhovni/postfix) mail server in this
    ```
 
 2. **Configuring Postfix to work with Gmail relay:**
-   Modify the configuration file (main.cf) to add the necessary lines.
+   Modify the configuration file (main.cf) to add the necessary lines. -- Refer [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf)
    
    ![Screenshot 1](https://github.com/0hex7/IIPP-Internship/assets/108691415/d059fec3-4043-4e37-9c87-c0e80de40a6f)
    ![Screenshot 2](https://github.com/0hex7/IIPP-Internship/assets/108691415/17372dc5-0f08-4577-ada2-d4ec4acded8f)
