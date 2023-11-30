@@ -1,14 +1,14 @@
-# Implementing Email Manipulation in Tpot Honeypot 
+# Implementing Email Manipulation in Tpot Honeypot
 
 ## Introduction
 
-The implementation of email manipulation in Tpot Honeypot involves two phases. Phase 1 focuses on the proposed model, deploying a mail server and integrating Suricata for enhanced email security. Phase 2 introduces an alternative approach, addressing Suricata limitations through the use of Procmail.
+Implementing email manipulation in the Tpot Honeypot involves a two-phase approach. Phase 1 focuses on deploying a mail server, integrating Suricata for enhanced email security, and proposing a model for email manipulation. In Phase 2, an alternative approach is introduced to address Suricata limitations using Procmail.
 
 ## Phase 1: Proposed Model
 
 ### Model Overview
 
-The proposed model in Phase 1 involves deploying a mail server in the honeypot and utilizing Suricata for monitoring email contents. Custom rules are developed to detect malicious attachments, and suspicious emails are forwarded to another server for in-depth analysis.
+The proposed model in Phase 1 deploys a mail server within the honeypot, utilizing Suricata for monitoring email contents. Custom rules are developed to detect malicious attachments, and suspicious emails are forwarded to another server for in-depth analysis.
 
 ![Screenshot 1](https://github.com/0hex7/IIPP-Internship/assets/108691415/faa8b926-8c03-4daf-bef8-14dd434e87d4)
 
@@ -16,81 +16,86 @@ The proposed model in Phase 1 involves deploying a mail server in the honeypot a
 
 #### Step 1: Mail Server Setup
 
-We are using [Postfix](https://github.com/vdukhovni/postfix) mail server in this setup.
+In this setup, the [Postfix](https://github.com/vdukhovni/postfix) mail server is employed.
 
 1. **Postfix Installation:**
    ```bash
    sudo apt install postfix
    ```
 
-2. **Configuring Postfix to work with Gmail relay:**
-   Modify the configuration file (main.cf) to add the necessary lines. -- Refer [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf)
-   
+2. **Configuring Postfix for Gmail Relay:**
+   Modify the configuration file (main.cf) to include the necessary lines. Refer to [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf).
+
    ![Screenshot 1](https://github.com/0hex7/IIPP-Internship/assets/108691415/d059fec3-4043-4e37-9c87-c0e80de40a6f)
    ![Screenshot 2](https://github.com/0hex7/IIPP-Internship/assets/108691415/17372dc5-0f08-4577-ada2-d4ec4acded8f)
    ![Screenshot 3](https://github.com/0hex7/IIPP-Internship/assets/108691415/25c0ac9c-6f40-46c7-9352-ab64119a0f73)
 
-   A drawback of this model is that it can only send emails; it cannot receive any due to the absence of a definitive domain name.
+   Note: This model can only send emails and cannot receive them due to the absence of a definitive domain name.
 
 3. **Domain Registration:**
    Register a domain (e.g., nycuaiserver.ddns.net) on [www.noip.com](https://www.noip.com).
-   
+
    ![Screenshot 4](https://github.com/0hex7/IIPP-Internship/assets/108691415/3f387633-c684-475b-bdee-64f871fecc1a)
 
 4. **Setting up DUC:**
    Download and install DUC, associating the dynamic IP with the registered domain.
 
 5. **MX Records Setup:**
-   Login to the domain registrar (no-ip) and add 1 MX record with the highest priority for the honeypot's hostname.
-   
+   Log in to the domain registrar (no-ip) and add one MX record with the highest priority for the honeypot's hostname.
+
    ![Screenshot 5](https://github.com/0hex7/IIPP-Internship/assets/108691415/89cda257-be76-4a47-801e-85471c7f3ac4)
    ![Screenshot 6](https://github.com/0hex7/IIPP-Internship/assets/108691415/5e6d6325-f0b0-467b-85eb-3271c9b2beb0)
 
 6. **Mail Server Test:**
    Verify the mail server's functionality by sending a test email from a personal account to the mail server.
-   
+
    ![Screenshot 7](https://github.com/0hex7/IIPP-Internship/assets/108691415/6432d2fb-9daa-4bdb-a785-c07bc39aad3d)
 
- **The mail server is set up, and incoming mails are being delivered.**
+**The mail server is set up, and incoming mails are being delivered.**
 
 #### Step 2: Suricata Integration
 
 1. **Suricata Rules:**
    Develop custom Suricata rules to detect suspicious email activities. Examples include alerting on SMTP logs for suspicious activity and detecting files found over SMTP.
-   
-   - First, modify the prebuilt Suricata container inside the Tpot honeypot by executing the following commands in order.
-  
+
+   - Modify the prebuilt Suricata container inside the Tpot honeypot using the provided commands.
+
      ```bash
      docker exec -it suricata /bin/sh
      ```
 
      Inside the container, configure the rules and config files.
+
      ```bash
      apk add nano
      ```
 
      Remove the prebuilt config file.
+
      ```bash
      rm /etc/suricata/suricata.yaml
      ```
 
-     Create a new file, copy the config file from [Suricata-suricata.yaml](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Suricata/Suricata-suricata.yaml), paste it into nano, and save it by doing CTRL+x.
+     Create a new file, copy the config file from [Suricata-suricata.yaml](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Suricata/Suricata-suricata.yaml), paste it into nano, and save it by pressing CTRL+x.
+
      ```bash
      nano /etc/suricata/suricata.yaml
      ```
 
      Create a local rules file and add the rules already built into the [Suricata rules](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Suricata/Suricata-local.rules) file.
+
      ```bash
      nano /var/lib/suricata/rules/local.rules
      ```
 
      Run Suricata with the updated config file and rules.
+
      ```bash
      suricata -c /etc/suricata/suricata.yaml -i eth0
      ```
 
-3. **Issues and Alternatives:**
-   Suricata limitations are acknowledged, and alternatives are considered for functionalities like forwarding emails with .exe attachments.
+2. **Issues and Alternatives:**
+   Suricata has a few limitation with respect to forwarding mails if any SMTP rule is triggered. So, lets consider another approach to this..!
 
 ## Phase 2: Alternative Approach
 
@@ -111,54 +116,60 @@ The network architecture includes hidden accounts/servers isolated from external
 ### Isolated Accounts/ Servers
 
 To isolate accounts:
-- Add new users to the system.
-- Modify /etc/aliases to include these users.
-- Set up header checks in the Postfix configuration to reject emails not from the specified domain. -- Refer [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf)
-  In this there is a regex check for the headers.
-  to implement header checks, we need to
-  
-  sudo nano header_checks --> Copy paste the rules from [Header_checks](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Header_checks) file, and save it using CTRL+X
-  
-  sudo systemctl restart postfix --> restart with the new configuration file.
-  
-  Once postfix is restarted, it implements the isolation of 2 particular accounts i.e susmails and review-unit.
-  Any mail from external mail server can not reach these 2 accounts, but internal mail server can reach these 2 accounts/ servers.
+
+1. Add new users to the system.
+2. Modify /etc/aliases to include these users.
+3. Set up header checks in the Postfix configuration to reject emails not from the specified domain. Refer to [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf).
+   In this, there is a regex check for the headers.
+
+   To implement header checks, follow these steps:
+
+   ```bash
+   sudo nano header_checks
+   ```
+
+   Copy-paste the rules from [Header_checks](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Header_checks) file and save it using CTRL+X.
+
+ 
+   Restart the Postfix mail server
+   ```bash
+   sudo systemctl restart postfix
+   ```
+
+   Once Postfix is restarted, it implements the isolation of two particular accounts i.e., `susmails` and `review-unit`.
+   Any mail from an external mail server cannot reach these two accounts, but the internal mail server can reach them.
 
 ### Procmail Setup
 
-[Procmail](https://github.com/Distrotech/procmail) can be used to create mail-servers, mailing lists, sort your incoming mail into separate folders/files (real convenient when subscribing to one or more mailing lists or for prioritizing your mail), preprocess your mail, start any programs upon mail arrival (e.g. to generate different chimes on your workstation for different types of mail) or selectively forward certain incoming mail automatically to someone.
-
+[Procmail](https://github.com/Distrotech/procmail) can be used to create mail servers, mailing lists, sort your incoming mail into separate folders/files, preprocess your mail, and selectively forward certain incoming mail automatically to someone.
 
 1. **Procmail Installation:**
    ```bash
    sudo apt install procmail
    ```
-   All the forwarding recipes must be added to individual users, from whose account we want
 
- to set up email-forwarding if any rule is triggered!
+   All the forwarding recipes must be added to individual users from whose account we want to set up email forwarding if any rule is triggered.
 
 2. **Mail Forwarding Setup:**
-   - Create rules in `~/.procmailrc` to forward emails with .exe or .zip attachments to `reviewunit` and phishing emails to `susmails`. The rules are mentioned in [.procmailrc](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Email-manipulation/.procmailrc), you can copy-paste them into your recipe file.
-   
+   - Create rules in `~/.procmailrc` to forward emails with .exe or .zip attachments to `reviewunit` and phishing emails to `susmails`. The rules are mentioned in [.procmailrc](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Email-manipulation/.procmailrc). Copy-paste them into your recipe file.
+
    ![Screenshot 2](https://github.com/0hex7/IIPP-Internship/assets/108691415/10129e4d-ea40-400b-ac36-941680604e96)
 
    - Create a `procmail.log` file in the home directory using the command `touch procmail.log`.
-   - Now, modify the configuration file of the mail server i.e Postfix to catch commands from Procmail.
+   - Now, modify the configuration file of the mail server i.e., Postfix to catch commands from Procmail.
 
-        Removes the old config file.
      ```bash
      sudo rm /etc/postfix/main.cf
      ```
-  
-     
-        Copy-paste the contents of [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf) file into nano, and save it using CTRL+x.
+
+     Copy-paste the contents of [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf) file into nano, and save it using CTRL+x.
 
      ```bash
      nano /etc/postfix/main.cf
      ```
-  
-     
-     Restarts the Postfix mail server.
+
+     Restart the Postfix mail server.
+
      ```bash
      systemctl restart postfix
      ```
