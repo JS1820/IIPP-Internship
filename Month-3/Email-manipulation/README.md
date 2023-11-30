@@ -113,7 +113,16 @@ The network architecture includes hidden accounts/servers isolated from external
 To isolate accounts:
 - Add new users to the system.
 - Modify /etc/aliases to include these users.
-- Set up header checks in the Postfix configuration to reject emails not from the specified domain.
+- Set up header checks in the Postfix configuration to reject emails not from the specified domain. -- Refer [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf)
+  In this there is a regex check for the headers.
+  to implement header checks, we need to
+  
+  sudo nano header_checks --> Copy paste the rules from [Header_checks](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Header_checks) file, and save it using CTRL+X
+  
+  sudo systemctl restart postfix --> restart with the new configuration file.
+  
+  Once postfix is restarted, it implements the isolation of 2 particular accounts i.e susmails and review-unit.
+  Any mail from external mail server can not reach these 2 accounts, but internal mail server can reach these 2 accounts/ servers.
 
 ### Procmail Setup
 
@@ -135,18 +144,24 @@ To isolate accounts:
 
    - Create a `procmail.log` file in the home directory using the command `touch procmail.log`.
    - Now, modify the configuration file of the mail server i.e Postfix to catch commands from Procmail.
+
+        Removes the old config file.
      ```bash
      sudo rm /etc/postfix/main.cf
      ```
-     Removes the old config file.
+  
+     
+        Copy-paste the contents of [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf) file into nano, and save it using CTRL+x.
+
      ```bash
      nano /etc/postfix/main.cf
      ```
-     Copy-paste the contents of [Postfix-main.cf](https://github.com/0hex7/IIPP-Internship/blob/main/Month-3/Postfix/Postfix-main.cf) file into nano, and save it using CTRL+x.
+  
+     
+     Restarts the Postfix mail server.
      ```bash
      systemctl restart postfix
      ```
-     Restarts the Postfix mail server.
 
 Now everything is set up; let's perform some test emulations and observe the results!
 
