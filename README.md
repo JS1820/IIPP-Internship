@@ -139,24 +139,6 @@ These findings drive practical advancements in active defense, addressing modern
 - **/Tools/** : Additional resources on the tools used during the internship.
 
 
-
-## Internship goals Integration
-
-### 'Affect' goal Weekly Reports
-
-- **Week 1-12: https://drive.google.com/drive/folders/1w5y_S3zWM21egJUsc8SujbC3Nl3nzfzu?usp=sharing**
-
-### 'Expose' goal documentation
-
-- **Refer here for Expose goal of MITRE Engage implementation --  [Expose-goal](https://github.com/sandxxax/IIPP-Internship) Credits @[Pavan Kumar](https://github.com/Lonelypheonix/)**
-
-### 'Elicit' goal documentation
-
-- **Refer here for Elicit goal of MITRE Engage implementation --  [Elicit-goal](https://github.com/Lonelypheonix/IIPP-Internship) Credits @[Sandhya V](https://github.com/sandxxax/)**
-
-
-
-
 ## Acknowledgments
 
 I express sincere gratitude to Professor Ren-Hung Hwang for exceptional mentorship, guidance, and continuous support throughout the 3-month internship. Special thanks to seniors at the ANT Lab, specially @[haward79](https://github.com/haward79/) for his collaboration and insights that significantly enriched the overall experience.
